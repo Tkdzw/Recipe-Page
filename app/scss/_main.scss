@@ -1,0 +1,123 @@
+img {
+    max-width: 100%;
+}
+
+.container {
+    display: block;
+    padding: 30px 35px;
+
+}
+
+section {
+    padding-bottom: 30px;
+}
+
+.heading {
+    font-size: 40px;
+    font-weight: $font-w-sm;
+    font-family: $YoungSerif;
+}
+
+.subMenu {
+    color: $DarkRaspberry;
+    font-weight: $font-w-md;
+    font-size: 18px;
+}
+
+.subHeading {
+    color: $Nutmeg;
+    font-size: 30px;
+    font-family: $YoungSerif;
+}
+
+ul {
+    @include reset-sizing;
+    list-style: none;
+    margin-top: 10px;
+
+}
+
+ul li:before {
+    content: "•";
+    color: $DarkRaspberry;
+    margin-right: 25px;
+}
+
+
+ul li {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    margin-top: 20px;
+}
+
+
+
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: li;
+
+    li {
+        text-align: left;
+    }
+
+    
+}
+
+
+
+ol li:before {
+    content: counter(li)".";
+    counter-increment: li;
+    color: $Nutmeg;
+    font-weight: $font-w-lg;
+    margin-right: 20px;
+
+
+
+}
+
+ol li span {
+    font-weight: bold;
+}
+
+.grid .row:not(:last-child) {
+    border-bottom: 1px solid $Eggshell;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 0;
+
+    :first-child {
+        padding-left: 30px;
+    }
+}
+
+.attribution {
+    text-align: center;
+}
+
+.line {
+    border-bottom: 1px solid $Eggshell;
+
+}
+
+
+@media (min-width:1440px) {
+    img{
+        padding: 40px 40px 0 40px;
+        border-radius: 10px;
+        max-width: 100%;
+    }
+
+   body{
+    padding: 10% 30%;
+
+   }
+}

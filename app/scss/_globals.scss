@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    @include reset-sizing;
+    line-height: 1.6;
+}
+
+body {
+    @include reset-sizing;
+    color: $DarkCharcoal;
+    font-family: $Outfit;
+    background-color: $Eggshell;
+
+}
+
+.flexbox {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-jc-sa {
+        justify-content: space-around;
+    }
+}
+
+.grid{
+    display: grid;
+}
+
+.card {
+    @include card();
+  }
+  
+  // Use the mixin to create a card with a custom background color
+  .card-rosewhite {
+    @include card($RoseWhite,20px);
+  }
+  
+  // Use the mixin to create a card with another custom background color
+  .card-white {
+    @include card($White);
+  }
+
+  
+
+.highlight{
+
+    &-brown{
+        color: $Nutmeg;
+        font-weight: $font-w-lg;
+    }
+}
+
